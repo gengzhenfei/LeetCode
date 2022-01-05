@@ -1,14 +1,14 @@
 #include <iostream>
 #include <string>
-#include "L009PalindromeNumber.cpp"
+#include "L010RegularExpressionMatching.cpp"
 using namespace std;
 
 int main()
 {
-    int x = 1211;
-    cout << "" << to_string(x) << endl;
-    L009PalindromeNumber PalindromeNumber;
-    cout << PalindromeNumber.isPalindrome(x) << endl;
+    string s = "aabcbcbcaccbcaabc";
+    string p = ".*a*aa*.*b*.c*.*a*";
+    L010RegularExpressionMatching RegularExpression;
+    cout << "true = " << true << "  " << RegularExpression.isMatch(s, p) << endl;
 
     return 0;
 }
