@@ -24,7 +24,7 @@ AlignEscapedNewlines: Right
 AlignOperands: true
 
 # 对齐连续的尾随的注释
-AlignTrailingComments: true
+AlignTrailingComments: false
 
 # 不允许函数声明的所有参数在放在下一行
 AllowAllParametersOfDeclarationOnNextLine: false
