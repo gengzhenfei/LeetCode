@@ -1,13 +1,20 @@
 #include <iostream>
-#include "L006ZigzagConversion.cpp"
+#include "L019RemoveNthNodeFromEndOfList.cpp"
 using namespace std;
 
 int main()
 {
-    string s("PAYPALISHIRING");
-    int rows = 40;
-    L006ZigzagConversion ZigzagConversion;
-    cout << ZigzagConversion.convert(s, rows) << endl;
+    vector<int> v{1, 2, 3, 4, 5};
+    int n = 2;
+    L019RemoveNthNodeFromEndOfList RemoveNthNodeFromEndOfList;
+    ListNode *head = RemoveNthNodeFromEndOfList.array2ListNode(v);
+    head = RemoveNthNodeFromEndOfList.removeNthFromEnd(head, n);
+    // 打印链表
+    ListNode *p = head;
+    while (p != nullptr) {
+        cout << p->val << endl;
+        p = p->next;
+    }
 
     return 0;
 }
