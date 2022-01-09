@@ -1,15 +1,14 @@
 #include <iostream>
-#include "L023MergeKSortedLists.cpp"
+#include "L024SwapNodesInPairs.cpp"
 using namespace std;
 
 int main()
 {
     // 构造测试数据
-    vector<vector<int>> v{{1, 4, 5}, {1, 3, 4}};
-    vector<ListNode *> lists{};
-    for (auto i : v) { lists.push_back(Utils::vector2ListNode(i)); }
-    L023MergeKSortedLists MergeKSortedLists;
-    ListNode *result = MergeKSortedLists.mergeKLists(lists);
+    vector<int> v{1};
+    ListNode *list = Utils::vector2ListNode(v);
+    L024SwapNodesInPairs SwapNodesInPairs;
+    ListNode *result = SwapNodesInPairs.swapPairs(list);
     Utils::printLink(result);
 
     return 0;
