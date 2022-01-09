@@ -21,7 +21,7 @@ public:
      * 内存消耗：11.2 MB, 在所有 C++ 提交中击败了62.06%的用户
      * 通过测试用例：62 / 62
      */
-    ListNode *reverseKGroup(ListNode *head, int k)
+    ListNode *reverseKGroup_2(ListNode *head, int k)
     {
         if (k <= 1 || head == nullptr || head->next == nullptr) return head;
         // vector<ListNode *> v; // 使用vector容器
@@ -61,6 +61,51 @@ public:
             pre = v[0];
             p = pre->next; // p指向下一轮k个节点的第一个节点
             // v.clear(); // 容器清空
+        }
+        return head;
+    }
+
+    /**
+     * 使用常数额外空间的算法
+     */
+    ListNode *reverseKGroup(ListNode *head, int k)
+    {
+        if (k <= 1 || head == nullptr || head->next == nullptr) return head;
+        ListNode *p = head, *q = p, *pre, *last;
+        // step1. 先处理前k个节点
+        int i = 1;
+        for (; i < k; i++) {
+            q = q->next;
+            if (q == nullptr) return head;
+        }
+        head = q;
+        last = p;
+        pre = p;
+        p = p->next;
+        pre->next = q->next;
+        for (i = 1; i < k; i++) { // 按照这样节点的顺序推进并翻转 pre -> p ->q ==> pre <- p , q
+            q = p->next;
+            p->next = pre;
+            pre = p;
+            p = q;
+        }
+
+        // step2. 处理后续节点
+        while (p != nullptr) {
+            for (i = 1; i < k; i++) {
+                q = q->next;
+                if (q == nullptr) return head;
+            }
+            last->next = q; // 上一组的最后一个节点的next指向本组的第k个节点
+            last = pre = p;
+            p = p->next;
+            pre->next = q->next;
+            for (i = 1; i < k; i++) { // 按照这样节点的顺序推进并翻转 pre -> p ->q ==> pre <- p , q
+                q = p->next;
+                p->next = pre;
+                pre = p;
+                p = q;
+            }
         }
         return head;
     }
