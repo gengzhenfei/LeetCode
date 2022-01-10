@@ -1,16 +1,14 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L029DivideTwoIntegers.cpp"
+#include "L031NextPermutation.cpp"
 using namespace std;
 
 int main()
 {
-    int dividend = 2147483647;
-    int divisor = 3;
-    L029DivideTwoIntegers DivideTwoIntegers;
-    int val = DivideTwoIntegers.divide(dividend, divisor);
-    cout << "dividend: " << dividend << "\n~|dividend|+1: " << ~abs(dividend) + 1 << endl;
-    cout << "val: " << val << endl;
+    vector<int> v{1, 3, 2};
+    L031NextPermutation NextPermutation;
+    NextPermutation.nextPermutation(v);
+    for (auto i : v) { cout << i << endl; }
     return 0;
 }
