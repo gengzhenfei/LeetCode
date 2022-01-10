@@ -1,16 +1,16 @@
 #include <iostream>
-#include "L025ReverseNodesInKGroup.cpp"
+#include "L027RemoveElement.cpp"
 using namespace std;
 
 int main()
 {
     // 构造测试数据
-    vector<int> v{1, 2, 3, 4, 5};
-    int k = 2;
-    ListNode *list = Utils::vector2ListNode(v);
-    L025ReverseNodesInKGroup ReverseNodesInKGrou;
-    ListNode *result = ReverseNodesInKGrou.reverseKGroup(list, k);
-    Utils::printLink(result);
+    vector<int> v{0, 1, 2, 2, 3, 0, 4, 2};
+    int val = 2;
+    L027RemoveElement RemoveElement;
+    int result = RemoveElement.removeElement(v, val);
+    cout << result << endl;
+    for (auto i : v) cout << i << endl;
 
     return 0;
 }
