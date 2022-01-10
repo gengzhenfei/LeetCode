@@ -1,16 +1,16 @@
+// main.cpp
+// 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L027RemoveElement.cpp"
+#include "L029DivideTwoIntegers.cpp"
 using namespace std;
 
 int main()
 {
-    // 构造测试数据
-    vector<int> v{0, 1, 2, 2, 3, 0, 4, 2};
-    int val = 2;
-    L027RemoveElement RemoveElement;
-    int result = RemoveElement.removeElement(v, val);
-    cout << result << endl;
-    for (auto i : v) cout << i << endl;
-
+    int dividend = 2147483647;
+    int divisor = 3;
+    L029DivideTwoIntegers DivideTwoIntegers;
+    int val = DivideTwoIntegers.divide(dividend, divisor);
+    cout << "dividend: " << dividend << "\n~|dividend|+1: " << ~abs(dividend) + 1 << endl;
+    cout << "val: " << val << endl;
     return 0;
 }
