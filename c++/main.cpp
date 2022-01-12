@@ -1,14 +1,15 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L031NextPermutation.cpp"
+#include "L028ImplementStrstr.cpp"
 using namespace std;
 
 int main()
 {
-    vector<int> v{1, 3, 2};
-    L031NextPermutation NextPermutation;
-    NextPermutation.nextPermutation(v);
-    for (auto i : v) { cout << i << endl; }
+    string str1 = "aabaaabaaac";
+    string str2 = "aabaaac";
+    L028ImplementStrstr ImplementStrstr;
+    int index = ImplementStrstr.strStr(str1, str2);
+    cout << index << endl;
     return 0;
 }
