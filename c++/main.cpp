@@ -1,15 +1,15 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L033SearchInRotatedSortedArray.cpp"
+#include "L034FindFirstAndLastPositionOfElementInSortedArray.cpp"
 using namespace std;
 
 int main()
 {
-    vector<int> nums{3, 1};
-    int target = 1;
-    L033SearchInRotatedSortedArray SearchInRotatedSortedArray;
-    int result = SearchInRotatedSortedArray.search(nums, target);
-    cout << result << endl;
+    vector<int> nums{5, 7, 7, 8, 8, 10};
+    int target = 6;
+    L034FindFirstAndLastPositionOfElementInSortedArray FindFirstAndLastPosition;
+    vector<int> result = FindFirstAndLastPosition.searchRange(nums, target);
+    for (auto i : result) cout << i << endl;
     return 0;
 }
