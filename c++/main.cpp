@@ -1,19 +1,15 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L039CombinationSum.cpp"
+#include "L040CombinationSum2.cpp"
 using namespace std;
 
 int main()
 {
-    vector<int> candidates{2, 3, 5};
+    vector<int> candidates{3, 1, 3, 5, 1, 1};
     int target = 8;
-    L039CombinationSum CombinationSum;
-    vector<vector<int>> result = CombinationSum.combinationSum(candidates, target);
-    for (auto r : result) {
-        cout << "[";
-        for (auto i : r) cout << " " << i;
-        cout << " ]" << endl;
-    }
+    L040CombinationSum2 CombinationSum2;
+    vector<vector<int>> result = CombinationSum2.combinationSum2(candidates, target);
+    for (auto r : result) { CombinationSum2.printVector(r); }
     return 0;
 }
