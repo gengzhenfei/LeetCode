@@ -1,14 +1,15 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L041FirstMissingPositive.cpp"
+#include "L043MultiplyStrings.cpp"
 using namespace std;
 
 int main()
 {
-    vector<int> nums{0, 2, 2, 1, 1};
-    L041FirstMissingPositive FirstMissingPositive;
-    int result = FirstMissingPositive.firstMissingPositive(nums);
+    string num1 = "2";
+    string num2 = "3";
+    L043MultiplyStrings MultiplyStrings;
+    string result = MultiplyStrings.multiply(num1, num2);
     cout << result << endl;
     return 0;
 }
