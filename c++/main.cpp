@@ -1,15 +1,15 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L043MultiplyStrings.cpp"
+#include "L042TrappingRainWater.cpp"
 using namespace std;
 
 int main()
 {
-    string num1 = "2";
-    string num2 = "3";
-    L043MultiplyStrings MultiplyStrings;
-    string result = MultiplyStrings.multiply(num1, num2);
+    // vector<int> height{4, 2, 0, 3, 2, 5};
+    vector<int> height{5, 4, 1, 2};
+    L042TrappingRainWater TrappingRainWater;
+    int result = TrappingRainWater.trap(height);
     cout << result << endl;
     return 0;
 }
