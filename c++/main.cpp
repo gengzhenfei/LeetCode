@@ -1,15 +1,14 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L042TrappingRainWater.cpp"
+#include "L045JumpGame2.cpp"
 using namespace std;
 
 int main()
 {
-    // vector<int> height{4, 2, 0, 3, 2, 5};
-    vector<int> height{5, 4, 1, 2};
-    L042TrappingRainWater TrappingRainWater;
-    int result = TrappingRainWater.trap(height);
+    vector<int> nums{4, 1, 1, 3, 1, 1, 1};
+    L045JumpGame2 JumpGame2;
+    int result = JumpGame2.jump(nums);
     cout << result << endl;
     return 0;
 }
