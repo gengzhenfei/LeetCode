@@ -1,14 +1,18 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L045JumpGame2.cpp"
+#include "L046Permutations.cpp"
 using namespace std;
 
 int main()
 {
-    vector<int> nums{4, 1, 1, 3, 1, 1, 1};
-    L045JumpGame2 JumpGame2;
-    int result = JumpGame2.jump(nums);
-    cout << result << endl;
+    vector<int> nums{0, 1};
+    L046Permutations Permutations;
+    vector<vector<int>> result = Permutations.permute(nums);
+    for (vector<int> v : result) {
+        cout << "[";
+        for (int i : v) { cout << " " << i; }
+        cout << " ]" << endl;
+    }
     return 0;
 }
