@@ -12,11 +12,15 @@ public:
     vector<vector<int>> permute(vector<int> &nums)
     {
         vector<vector<int>> result;
-        dfs(nums, result, vector<int>(), vector<int>(nums.size(), 0));
+        // dfs(nums, result, vector<int>(), vector<int>(nums.size(), 0));
+        perm(nums, result, 0, nums.size() - 1);
 
         return result;
     }
 
+    /**
+     * 通过标记
+     */
     void dfs(vector<int> &nums, vector<vector<int>> &result, vector<int> res, vector<int> mark)
     {
         if (res.size() == nums.size()) { // 结束条件
@@ -32,6 +36,33 @@ public:
                 mark[j] = 0; // 恢复 以便回溯
             }
         }
+    }
+
+    /**
+     * 通过交换
+     */
+    void perm(vector<int> &nums, vector<vector<int>> &result, int left, int right)
+    {
+        // cout << "left: " << left << " right: " << right << endl;
+        // printVector(nums);
+        if (left == right) {
+            result.push_back(nums);
+            return;
+        }
+        for (int i = left; i <= right; i++) {
+            // cout << "left: " << left << " i: " << i << endl;
+            swap(nums[left], nums[i]);
+            perm(nums, result, left + 1, right);
+            swap(nums[i], nums[left]); // 回溯。nums参数为引用传递，故需要回溯，如果值传递，则此行代码可省略
+        }
+        return;
+    }
+
+    void printVector(vector<int> v)
+    {
+        cout << "[";
+        for (int i : v) { cout << " " << i; }
+        cout << " ]" << endl;
     }
 };
 
