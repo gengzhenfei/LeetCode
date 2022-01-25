@@ -30,7 +30,7 @@ Utils::~Utils() {}
 TreeNode *Utils::array2BTree(vector<string> list, int index)
 {
     // "null" 表示空节点
-    if (list[index] == "null") return nullptr;
+    if (list.size() == 0 || list[index] == "null") return nullptr;
     // 新建节点
     TreeNode *p = new TreeNode(std::stoi(list[index]));
     int left_n = 2 * index + 1;
