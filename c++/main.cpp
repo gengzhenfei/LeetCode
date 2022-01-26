@@ -1,15 +1,15 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L199BinaryTreeRightSideView.cpp"
+#include "L050PowxN.cpp"
 using namespace std;
 
 int main()
 {
-    vector<string> list{"1", "2", "3", "null", "5", "null", "4"};
-    TreeNode *root = Utils::array2BTree(list);
-    L199BinaryTreeRightSideView BinaryTreeRightSideView;
-    vector<int> res = BinaryTreeRightSideView.rightSideView(root);
-    for (auto v : res) { cout << v << endl; }
+    double x = 2;
+    int n = -2;
+    L050PowxN PowxN;
+    double res = PowxN.myPow(x, n);
+    cout << res << endl;
     return 0;
 }
