@@ -1,15 +1,18 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L050PowxN.cpp"
+#include "L051NQueens.cpp"
 using namespace std;
 
 int main()
 {
-    double x = 2;
-    int n = -2;
-    L050PowxN PowxN;
-    double res = PowxN.myPow(x, n);
-    cout << res << endl;
+    int n = 6;
+    L051NQueens NQueens;
+    vector<vector<string>> res = NQueens.solveNQueens(n);
+    for (auto v_s : res) {
+        cout << "[" << endl;
+        for (auto s : v_s) { cout << "\"" << s << "\"," << endl; }
+        cout << "]" << endl;
+    }
     return 0;
 }
