@@ -1,14 +1,14 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L052NQueens2.cpp"
+#include "L053MaximumSubarray.cpp"
 using namespace std;
 
 int main()
 {
-    int n = 4;
-    L052NQueens2 NQueens2;
-    int total = NQueens2.totalNQueens(n);
-    cout << total << endl;
+    vector<int> nums{5, 4, -1, 7, 8};
+    L053MaximumSubarray MaximumSubarray;
+    int sum = MaximumSubarray.maxSubArray(nums);
+    cout << sum << endl;
     return 0;
 }
