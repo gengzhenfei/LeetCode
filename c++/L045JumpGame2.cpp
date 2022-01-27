@@ -37,6 +37,10 @@ public:
 
     /**
      * 贪心算法，每一跳寻找当前最远可跳的距离
+     * @param nums 最大跳跃数组
+     * @param n 当前位置
+     * @param j 最小跳跃次数
+     * @param cj 当前跳跃次数
      */
     void traceback(vector<int> &nums, int n, int &j, int cj)
     {
