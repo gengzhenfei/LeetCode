@@ -1,15 +1,14 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L066PlusOne.cpp"
+#include "L062UniquePaths.cpp"
 using namespace std;
 
 int main()
 {
-    vector<int> list{};
-    L066PlusOne PlusOne;
-    vector<int> res = PlusOne.plusOne(list);
-    for (int i : res) cout << i << " ";
-    cout << endl;
+    int m = 19, n = 13;
+    L062UniquePaths UniquePaths;
+    int paths = UniquePaths.uniquePaths(m, n);
+    cout << paths << endl;
     return 0;
 }
