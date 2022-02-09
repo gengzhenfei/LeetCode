@@ -1,14 +1,14 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L064MinimumPathSum.cpp"
+#include "L065ValidNumber.cpp"
 using namespace std;
 
 int main()
 {
-    vector<vector<int>> grid{{1, 3, 1}, {1, 5, 1}, {4, 2, 1}};
-    L064MinimumPathSum MinimumPathSum;
-    int sum = MinimumPathSum.minPathSum(grid);
-    cout << sum << endl;
+    string s = "005047e+6";
+    L065ValidNumber ValidNumber;
+    bool result = ValidNumber.isNumber(s);
+    cout << "true=" << true << " " << result << endl;
     return 0;
 }
