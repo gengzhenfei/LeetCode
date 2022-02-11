@@ -1,15 +1,18 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L074SearchA2dMatrix.cpp"
+#include "L073SetMatrixZeroes.cpp"
 using namespace std;
 
 int main()
 {
-    vector<vector<int>> matrix{{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 60}};
-    int target = 3;
-    L074SearchA2dMatrix SearchA2dMatrix;
-    bool res = SearchA2dMatrix.searchMatrix(matrix, target);
-    cout << "true:" << true << " " << res << endl;
+    vector<vector<int>> matrix{{0, 1, 2, 0}, {3, 4, 5, 2}, {1, 3, 1, 5}};
+    L073SetMatrixZeroes SetMatrixZeroes;
+    SetMatrixZeroes.setZeroes(matrix);
+    for (auto v : matrix) {
+        cout << "[ ";
+        for (int i : v) { cout << i << " "; }
+        cout << "]" << endl;
+    }
     return 0;
 }
