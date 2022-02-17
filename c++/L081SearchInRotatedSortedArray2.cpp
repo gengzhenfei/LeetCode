@@ -26,8 +26,16 @@ public:
                 res = true;
                 return;
             }
-            recurse(nums, target, res, s, m - 1);
-            recurse(nums, target, res, m + 1, e);
+            if (nums[s] < nums[e]) { // s到e序列为递增序列
+                if (nums[m] > target) {
+                    recurse(nums, target, res, s, m - 1);
+                } else {
+                    recurse(nums, target, res, m + 1, e);
+                }
+            } else {
+                recurse(nums, target, res, s, m - 1);
+                recurse(nums, target, res, m + 1, e);
+            }
         }
         return;
     }
