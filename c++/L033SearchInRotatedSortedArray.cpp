@@ -13,6 +13,16 @@ public:
 
     int search(vector<int> &nums, int target)
     {
+        int s = 0, e = nums.size() - 1;
+        int res = -1;
+        recurse(nums, target, res, s, e);
+        // res = search2(nums, target);
+
+        return res;
+    }
+
+    int search2(vector<int> &nums, int target)
+    {
         int nums_len = nums.size();
         int start = 0, end = nums_len - 1;
         while (start <= end) {
@@ -38,6 +48,23 @@ public:
             // cout << "start:" << start << " end:" << end << " mid:" << mid << endl;
         }
         return -1;
+    }
+
+    /**
+     * 递归的方式
+     */
+    void recurse(vector<int> &nums, int &target, int &res, int s, int e)
+    {
+        if (s <= e) {
+            int m = (s + e) / 2;
+            if (nums[m] == target) {
+                res = m;
+                return;
+            }
+            recurse(nums, target, res, s, m - 1);
+            recurse(nums, target, res, m + 1, e);
+        }
+        return;
     }
 };
 
