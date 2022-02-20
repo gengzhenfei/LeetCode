@@ -1,15 +1,16 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L083RemoveDuplicatesFromSortedList.cpp"
+#include "L086PartitionList.cpp"
 using namespace std;
 
 int main()
 {
-    vector<int> nums{1, 1, 1, 2, 2, 3};
+    vector<int> nums{1, 4, 3, 2, 5, 2};
+    int x = 3;
     ListNode *head = Utils::vector2ListNode(nums);
-    L083RemoveDuplicatesFromSortedList RemoveDuplicates;
-    ListNode *res = RemoveDuplicates.deleteDuplicates(head);
+    L086PartitionList PartitionList;
+    ListNode *res = PartitionList.partition(head, x);
     Utils::printLink(res);
     return 0;
 }
