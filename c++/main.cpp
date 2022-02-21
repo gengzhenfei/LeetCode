@@ -1,16 +1,16 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L086PartitionList.cpp"
+#include "L088MergeSortedArray.cpp"
 using namespace std;
 
 int main()
 {
-    vector<int> nums{1, 4, 3, 2, 5, 2};
-    int x = 3;
-    ListNode *head = Utils::vector2ListNode(nums);
-    L086PartitionList PartitionList;
-    ListNode *res = PartitionList.partition(head, x);
-    Utils::printLink(res);
+    vector<int> nums1{1, 2, 3, 0, 0, 0};
+    vector<int> nums2{2, 5, 6};
+    int m = 3, n = 3;
+    L088MergeSortedArray MergeSortedArray;
+    MergeSortedArray.merge2(nums1, m, nums2, n);
+    for (int i : nums1) cout << i << endl;
     return 0;
 }
