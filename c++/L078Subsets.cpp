@@ -14,8 +14,8 @@ public:
         int n = nums.size();
         vector<int> sub;
         vector<vector<int>> res;
-        res.push_back(vector<int>()); // 空子集
-        for (int k = 1; k <= n; k++) { backtrace(n, k, nums, sub, res, 0); }
+        // k=0 即 空子集
+        for (int k = 0; k <= n; k++) { backtrace(n, k, nums, sub, res, 0); }
 
         return res;
     }
