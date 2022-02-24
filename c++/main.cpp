@@ -1,16 +1,14 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L088MergeSortedArray.cpp"
+#include "L084LargestRectangleInHistogram.cpp"
 using namespace std;
 
 int main()
 {
-    vector<int> nums1{1, 2, 3, 0, 0, 0};
-    vector<int> nums2{2, 5, 6};
-    int m = 3, n = 3;
-    L088MergeSortedArray MergeSortedArray;
-    MergeSortedArray.merge2(nums1, m, nums2, n);
-    for (int i : nums1) cout << i << endl;
+    vector<int> heights{2, 1, 5, 6, 2, 3};
+    L084LargestRectangleInHistogram LargestRectangleInHistogram;
+    int res = LargestRectangleInHistogram.largestRectangleArea(heights);
+    cout << res << endl;
     return 0;
 }
