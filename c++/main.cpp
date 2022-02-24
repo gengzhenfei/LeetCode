@@ -1,18 +1,14 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L090Subsets2.cpp"
+#include "L091DecodeWays.cpp"
 using namespace std;
 
 int main()
 {
-    vector<int> nums{2, 1, 2};
-    L090Subsets2 Subsets2;
-    vector<vector<int>> res = Subsets2.subsetsWithDup(nums);
-    for (vector<int> v : res) {
-        cout << "[ ";
-        for (int i : v) cout << i << " ";
-        cout << "]" << endl;
-    }
+    string s = "10";
+    L091DecodeWays DecodeWays;
+    int res = DecodeWays.numDecodings(s);
+    cout << res << endl;
     return 0;
 }
