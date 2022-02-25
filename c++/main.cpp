@@ -1,16 +1,14 @@
 // main.cpp
 // 调试时将以下代码放入main.cpp文件
 #include <iostream>
-#include "L092ReverseLinkedList2.cpp"
+#include "L093RestoreIpAddresses.cpp"
 using namespace std;
 
 int main()
 {
-    vector<int> list{1, 2, 3, 4, 5};
-    int left = 4, right = 5;
-    ListNode *head = Utils::vector2ListNode(list);
-    L092ReverseLinkedList2 ReverseLinkedList2;
-    ListNode *res = ReverseLinkedList2.reverseBetween(head, left, right);
-    Utils::printLink(res);
+    string s = "000256";
+    L093RestoreIpAddresses RestoreIpAddresses;
+    vector<string> res = RestoreIpAddresses.restoreIpAddresses(s);
+    for (string s : res) cout << s << endl;
     return 0;
 }
