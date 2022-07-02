@@ -1,3 +1,5 @@
+#ifndef _UTILS_CPP
+#define _UTILS_CPP
 #include <vector>
 #include <string>
 #include <iostream>
@@ -90,3 +92,5 @@ ListNode *Utils::vector2ListNode(vector<int> v)
 
     return head;
 }
+
+#endif
